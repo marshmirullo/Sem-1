@@ -1,0 +1,186 @@
+public class L3Q1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        double num1 , num2 ;
+        char op ;
+        System.out.printf("Enter two integer number : ");
+        num1 = sc.nextDouble();
+        num2 = sc.nextDouble(); 
+        System.out.println("Enter the operand : ");
+        op = sc.next().charAt(0);
+            switch(op){
+                case '+':
+                    System.out.println(num1+" + "+num2+" = "+(num1 + num2));
+                case '-':
+                    System.out.println(num1+" - "+num2+" = "+(num1 - num2));
+                case '*':
+                    System.out.println(num1+" * "+num2+" = "+(num1*num2));
+                case '/':
+                    System.out.println(num1+" / "+num2+" = "+(num1/num2));
+                case '%':
+                    System.out.println(num1+" % "+num2+" = "+(num1%num2));
+                default :
+                    System.out.println("Invalid input !");
+            } 
+//    System.out.println("Input any alphabet : ");
+//		char alpha = sc.next().charAt(0); // charAt(condition) -> return a character
+//			if( alpha >= 'A' && alpha <= 'Z'){	
+//			System.out.println( alpha + " is uppercase alphabet.");
+//    				}
+//    			else if(alpha >= 'a' && alpha<= 'z'){
+//        		System.out.println(alpha + " is lowercase alphabet.");
+//    				}
+//    			else{
+//                        	System.out.println(alpha + " is not an alphabet.");
+//   				 }
+        
+//	System.out.println("Input 3 integers : ");
+//	int num1 = sc.nextInt();
+//	int num2 = sc.nextInt();
+//	int num3 = sc.nextInt();
+//		if ( num1 > num2 && num1 > num3){
+//			System.out.println(num1+" is the biggest number!"); }
+//		else if( num2 > num1 && num2 > num3) {
+//			System.out.println(num2+" is the biggest number!");}
+//		else {
+//			System.out.println(num3+" is the biggest number!");}
+
+
+                
+    }
+}
+
+public class L3Q2 {
+    public static void main(String[] args) {
+        int num ;
+        Random r = new Random();
+        num = r.nextInt(6); // 6 = 0 to 5 
+            if(num==0){
+                System.out.println( num + " is zero");
+            }
+            else if(num==1){
+                System.out.println(num + " is one");
+            }
+            else if (num==2){
+                System.out.println(num + " is two");
+            }
+            else if(num==3){
+                System.out.println(num + " is three");
+            }
+            else if(num==4){
+                System.out.println(num + " is four");
+            }
+            else {
+                System.out.println(num + " is five");
+            }
+    }
+}
+
+public class L3Q3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        double sales,total;
+        System.out.println("Input sales volume : ");
+        sales = sc.nextInt(); // remember that if-statement follow which one comes first
+            if (sales >= 1000){
+                sales*=12.5;
+                total=sales;
+                System.out.printf("Total commission : RM %.2f", total);
+                }
+            else if(sales > 500 || sales <= 1000){
+                sales*=10.0;
+                total=sales;
+                System.out.printf("Total commission : RM %.2f", total);
+            }
+            else if(sales > 100 || sales <= 500){
+                sales*=7.5;
+                total=sales;
+                System.out.printf("Total commission : RM %.2f", total);
+            }
+            else if(sales <=100){
+                sales*=5.0;
+                total=sales;
+                System.out.printf("Total commission : RM %.2f", total);
+        }
+    }
+}
+
+public class L3Q4 {
+    public static void main(String[] args) {
+        final int dice = 6;
+        int totalP1,totalP2,Roll1,Roll2,Roll3,Roll4;
+        Random r = new Random ();
+            Roll1 = r.nextInt(dice) + 1; // formula = (max - min) + min eg : max = 50 min = 10 
+            Roll2 = r.nextInt(dice) + 1;
+            Roll3 = r.nextInt(dice) + 1; 
+            Roll4 = r.nextInt(dice) + 1;
+                
+            System.out.println("Player 1 First Roll : " + Roll1);
+            System.out.println("Player 1 Second Roll : " + Roll2);
+            System.out.println("Player 2 First Roll : " + Roll3);
+            System.out.println("Player 2 Second Roll : " + Roll4);
+            totalP1 = Roll1+Roll2;
+            totalP2 = Roll3+Roll4;
+            System.out.println("Score Player 1 : " + totalP1);
+            System.out.println("Score Player 2 : " + totalP2);
+
+            if(totalP1>totalP2){
+                System.out.println("Player 1 WINS");
+            }
+            else if(totalP2<totalP1){
+                System.out.println("Player 2 WINS");
+            }
+            else 
+                System.out.println("IT\'S A TIE");
+            
+    }
+}
+
+public class L3Q5 {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner (System.in);
+    double a,b,c,d,e,f;
+        System.out.println("Enter a :");
+        a = sc.nextDouble();
+        System.out.println("Enter b :");
+        b = sc.nextDouble();
+        System.out.println("Enter c :");
+        c = sc.nextDouble();
+        System.out.println("Enter d :");
+        d = sc.nextDouble();
+        System.out.println("Enter e :");
+        e = sc.nextDouble();
+        System.out.println("Enter f :");
+        f = sc.nextDouble();
+        
+        if((a*d-b*c == 0)){
+            System.out.println("The equation has no solution");
+        }
+        else {
+            System.out.printf("\nx = %4.2f,\ny = %4.2f" ,((e*d-b*f)/(a*d-b*c)),((a*f-e*c)/(a*d-b*c))  );
+        }
+                
+    }
+}
+
+public class L3Q6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        double value,radius , x , y ;
+        System.out.println("Enter radius");
+        radius = sc.nextDouble();
+        System.out.println("Coordinate X : ");
+        x = sc.nextDouble();
+        System.out.println("Coordinate Y : ");
+        y = sc.nextDouble();
+        
+        value = Math.sqrt(x*x + y*y); // distance formula 
+        
+        if(value<=radius ){
+            System.out.println("Point inside the radius");
+        }
+        else {
+            System.out.println("Point outside the radius"); 
+        }
+    }
+}
