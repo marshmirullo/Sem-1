@@ -1,0 +1,163 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Q1;
+import java.util.Scanner;
+public class LabReport1Q1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+            System.out.println("*       List of Operands             *");
+            System.out.println("* X = Multiplication of two numbers  *");
+            System.out.println("* D = Quotient of two numbers        *");
+            System.out.println("* M = Remainder of two numbers       *");
+            System.out.println("* A = Addition of two numbers        *");
+            System.out.println("* S = Subtraction of two numbers     *");
+            System.out.println("**************************************");
+        
+        double result , num1 , num2 , num3 ;
+        char op1 , op2 ;
+        System.out.println("Enter three integers : ");
+        num1 = sc.nextDouble();
+        num2 = sc.nextDouble();
+        num3 = sc.nextDouble();
+        System.out.println("Enter two operand : ");
+        op1 = sc.next().charAt(0);
+        op2 = sc.next().charAt(0);
+        // case1 =same operand
+        // case2 =differ operand
+        switch(op1){
+            case('X'):
+                if(op2=='D'){
+                    result=(num1*num2)/num3;
+                    System.out.printf("%4.2f",result);
+                    }
+                else if(op2=='M') { 
+                    result=(num1*num2)%num3;
+                    System.out.printf("%4.2f",result);
+                    }
+                else if(op2 == 'A'){
+                    result=num1*num2+num3;
+                    System.out.println(result);
+                        }   
+                else if(op2 == 'S'){
+                    result=num1*num2-num3;
+                    System.out.println(result);
+                            }
+                else if (op2=='X'){
+                    result=num1*num2*num3;
+                    System.out.println(result);
+                    }
+                    break;       
+            case('D'):
+                if(op2=='M'){
+                    result=num1/num2%num3;
+                    System.out.printf("%4.2f",result);
+                    }
+                else if(op2=='A'){
+                    result=num1/num2+num3;
+                    System.out.println(result);
+                        }
+                else if(op2=='S'){
+                    result=num1/num2-num3;
+                    System.out.println(result);
+                            }
+                else if(op2=='D'){
+                    result=num1/num2/num3;
+                    System.out.printf("%4.2f",result);
+                    }
+                    break;
+            case('M'):
+                if(op2=='A'){
+                    result=num1%num2+num3;
+                    System.out.printf("%4.2f",result);
+                    }
+                else if(op2=='S'){
+                    result=num1%num2-num3;
+                    System.out.println(result);
+                    }
+                else if(op2=='M'){
+                    result = num1%num2%num3;
+                    System.out.printf("%4.2f",result);
+                    }   
+                    break;
+            case('A'):
+                     if(op2=='S'){
+                     result=(num1+num2)-num3;
+                     System.out.println(result);
+                     }
+                     break;
+            case('S'):
+                    if(op2=='S'){
+                    result=num1-num2-num3;
+                    System.out.println(result);
+                    }
+                    if(op2=='A'){
+                    result=num1-num2+num3;
+                    System.out.println(result);
+                    }
+                    break;
+            default:
+                System.out.println("Invalid input");
+                }
+        switch(op2){
+            case('X'):
+                if(op1=='D'){
+                    result=num2*num3/num1;
+                    System.out.printf("%4.2f",result);
+                    }
+                else if(op1=='M'){
+                    result=num2*num3%num1;
+                    System.out.printf("%4.2f",result);
+                    }
+                else if(op1=='A'){
+                    result=num2*num3+num1;
+                    System.out.println(result);
+                }
+                else if(op1=='S'){
+                    result=num2*num3-num1;
+                    System.out.println(result);                   
+                }
+                break;
+            case('D'):
+                if(op1=='M'){
+                    result=num2/num3%num1;
+                    System.out.println(result);
+                    }
+                else if(op1=='A'){
+                    result=num1+num2/num3;
+                    System.out.println(result);
+                }
+                else if(op1=='S'){
+                    result=num2/num3-num1;
+                    System.out.println(result);
+                }
+                break;
+            case('M'):
+                if(op1=='A'){
+                    result=num2%num3+num1;
+                    System.out.println(result);
+                }
+                else if(op1=='S'){
+                    result=num1%num2-num3;
+                    System.out.println(result);
+                }
+                break;
+            case('A'):
+                if(op1=='A'){
+                        result=num1+num2+num3;
+                        System.out.println(result);
+                        }
+                break;
+            case('S'):
+                if(op2=='A'){
+                    result=num1-num2+num3;
+                    System.out.println(result);
+                }
+                break;
+            default:
+                System.out.println("Invalid input");
+            } 
+        }
+    }   
