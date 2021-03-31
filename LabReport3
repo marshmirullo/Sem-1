@@ -1,1 +1,91 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Q1;
 
+import java.util.Random;
+public class Pokemon {
+    private int Hp , Att , Def , Spd , Special , Lvl  ;
+    Random r =new Random ();
+    
+    
+    public static void getPokemon(){
+    String[] pokemon = {"Bulbasaur","Charizard","Squirtle"};
+        int str = new Random().nextInt(pokemon.length) ;
+        System.out.println("\nYou choose " + pokemon[str] +"!");
+        if(pokemon[str].equals("Bulbasaur")){
+            System.out.println("Pokemon Id : #002");
+            System.out.println("Type : Grass");
+        }
+        else if(pokemon[str].equals("Charizard")){
+            System.out.println("Pokemon Id : #006");
+            System.out.println("Type : Fire");
+        }
+        else if(pokemon[str].equals("Squirtle")){
+            System.out.println("Pokemon Id : #003");
+             System.out.println("Type : Water");
+        }
+    }
+    
+    public int getHp(){
+        int MAX = 25 , MIN = 1 ;
+        Hp = r.nextInt(MAX-MIN+1) + MIN;
+        return Hp;
+    }
+    public  int getAtt(){
+        int MAX = 17 , MIN = 10;
+        Att = r.nextInt(MAX-MIN+1) + MIN;
+        return Att;
+    }
+    public int getDef(){
+        int MAX = 17 , MIN = 10;
+        Def = r.nextInt(MAX-MIN+1) + MIN;
+        return Def ;
+    }
+    public int getSpd(){
+        int MAX = 15 , MIN = 5;
+        Spd = r.nextInt(MAX-MIN+1) + MIN;
+        return Spd;
+    }
+    public  int getSpecial (){
+        int MAX =10 , MIN = 5;   
+        Special = r.nextInt(MAX-MIN+1) + MIN;
+        return Special;
+    }
+    public int getLvl() {                   
+        return Lvl;
+    }
+    public String LevelUp(){
+        
+        int Hp1 = Hp + r.nextInt(5-2+1) + 2;
+        int Att1 = Att + r.nextInt(3) + 1;
+        int Def1 = Def + r.nextInt(3) + 1;
+        int Spd1 = Spd + r.nextInt(3) + 1;
+        int Special1 = Special + r.nextInt(3) + 1;
+        String str = "\n\nHit Point : "+Integer.toString(Hp1) + "\nAttack Point : "+Integer.toString(Att1)+"\nDefend Point : "+
+                    Integer.toString(Def1)+"\nSpeed Point : " + Integer.toString(Spd1) + "\nSpecial Point : " + Integer.toString(Special1);
+        
+        
+        int Hp2 = Hp1 + r.nextInt(5-2+1) + 2;
+        int Att2 = Att1 + r.nextInt(3) + 1;
+        int Def2 = Def1 + r.nextInt(3) + 1;
+        int Spd2 = Spd1 + r.nextInt(3) + 1;
+        int Special2 = Special1 + r.nextInt(3) + 1;
+        String str1 = "\n\nHit Point : "+Integer.toString(Hp2) + "\nAttack Point : "+Integer.toString(Att2)+"\nDefend Point : "+
+                    Integer.toString(Def2)+"\nSpeed Point : " + Integer.toString(Spd2) + "\nSpecial Point : " + Integer.toString(Special2) ;
+
+        
+        int Hp3 = Hp2 + r.nextInt(5-2+1) + 2;
+        int Att3 = Att2 + r.nextInt(3) + 1;
+        int Def3 = Def2 + r.nextInt(3) + 1;
+        int Spd3 = Spd2 + r.nextInt(3) + 1;
+        int Special3 = Special2 + r.nextInt(3) + 1;
+        String str2 = "\n\nHit Point : "+Integer.toString(Hp3) + "\nAttack Point : "+Integer.toString(Att3)+"\nDefend Point : "+
+                    Integer.toString(Def3)+"\nSpeed Point : " + Integer.toString(Spd3) + "\nSpecial Point : " + Integer.toString(Special3)  ;
+        return "Level : 1 " + str + "\n\nLevel : 2 "+ str1 + "\n\nLevel : 3 "+ str2;
+        }
+
+    
+}
