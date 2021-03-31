@@ -1,0 +1,133 @@
+import java.util.Scanner;
+
+public class L2Q1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int fahrenheit ;
+        double celcius ;
+        System.out.println("Input temperature (fahrenheit) : ");
+        fahrenheit = sc.nextInt();
+        celcius = (fahrenheit -32) / 1.8 ;
+        System.out.printf("%.2f",celcius);
+     
+    }
+}
+
+import java.util.Scanner;
+
+class CalculatePayment {
+    public static void MonthlyPayment (){
+    }
+}
+public class L2Q2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        double M, P , D , R , Y ;
+        System.out.println("Input price of car = ");
+        P = sc.nextDouble();
+        System.out.println("Input down payment = ");
+        D = sc.nextDouble();
+        System.out.println("Input interest rate in percent : ");
+        R = sc.nextDouble();
+        System.out.println("Input loan duration in year : ");
+        Y = sc.nextDouble();
+        M = ( P - D ) * (1 + R*Y / 100) / (Y*12);
+        System.out.printf("The monthly payment is :%.2f", M );
+        
+        
+    }
+}
+
+import java.util.Random;
+
+public class L2Q3 {
+    public static void main(String[] args) {
+        /*Random r = new Random ();
+        final int MAX =50 , MIN=10 ; 
+        int num ,total = 0;
+        double average = 0 ;
+        for(int i = 1 ; i <= 3 ; i++){
+            num = r.nextInt((MAX-MIN)+1) + MIN;
+            total += num;
+            average = total/3.0;
+        }
+        System.out.println("Total :" + total);
+        System.out.printf("Average :%.2f",average);
+        */
+        Random r = new Random ();
+        int num1 , num2 , num3 , sum ;
+        double average ; 
+        num1 = r.nextInt(40+1)+10;
+        num2 = r.nextInt(40+1)+10;
+        num3 = r.nextInt(40+1)+10;
+        System.out.print(num1);
+        System.out.print(" " + num2);
+        System.out.print(" " + num3);
+        sum = num1 + num2 + num3 ;
+        average = sum/3;
+        System.out.println("\n"+ sum);
+        System.out.printf("%.2f",average);
+    }
+}
+
+public class L2Q4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Enter the number of seconds : ");
+        int input = sc.nextInt();
+        int sec = input % 60 ;
+        int minute = input / 60 ;
+        minute = minute / 60 ;
+        int hour = minute % 60 ; 
+        System.out.println(input + " sec is " + minute + " hours," + " " + hour + " minutes"+ " and " + sec + " seconds.");
+    }
+}
+
+import java.util.Random;
+
+public class L2Q5 {
+    public static void main(String[] args) {
+        Random r = new Random ();
+        int random , p ;
+        int sum =0 ;
+        random = r.nextInt(10001);
+        System.out.println(random);
+        
+        while (random > 0){
+        //mathematical problem oo godddd
+        p = random % 10 ;
+        sum = sum + p ;
+        random = random / 10 ;
+        //loop again until reaches 0 
+        }
+        System.out.println("Sum : " + sum );
+    }
+}
+
+import java.util.Scanner;
+
+    class EnergytoheatWater {
+        public static void CalculateEnergy() {     
+        }
+    }
+public class L2Q6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        double M , Q , initialTemp , finalTemp , fahrenheit1 ,fahrenheit2 ;
+        System.out.println("Enter amount of water in gram : ");
+        M = sc.nextDouble();
+        M = M/1000;
+        //water in kg
+        System.out.println("Enter initial temperature in fahrenheit : ");
+        fahrenheit1 = sc.nextDouble();
+        initialTemp = (fahrenheit1 - 32) / 1.8 ;
+        //to celcius
+        System.out.println("Enter final temperature of fahrenheit : ");
+        fahrenheit2 = sc.nextDouble();
+        finalTemp = (fahrenheit2 - 32) / 1.8 ;
+        //to celcius
+        Q = M*(finalTemp- initialTemp) * 4184 ;
+        System.out.printf("The energy needed is %.6e", Q);
+        //6 dp for exponent
+    }
+}
