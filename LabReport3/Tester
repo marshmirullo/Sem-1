@@ -1,0 +1,46 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tool    s | Templates
+ * and open the template in the editor.
+ */
+package Q1;
+
+/**
+ *
+ * @author USER
+ */
+//Tester Program
+import java.util.Scanner;
+public class Tester {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Welcome to Pokemon Generator , Trainer !");
+        Pokemon a = new Pokemon();
+        wait(1500);
+        System.out.println("Seems a Pokemon has got interested in you , Trainer !");
+        wait(1500);
+
+        System.out.println("\n****Attributes****");
+        a.getPokemon();
+        System.out.println("Level : " + a.getLvl());
+        System.out.println("Hit Point : " + a.getHp());
+        System.out.println("Attack Point: " + a.getAtt());
+        System.out.println("Defend Point : " + a.getDef());
+        System.out.println("Speed Point: " + a.getSpd());
+        System.out.println("Special Point: " + a.getSpecial());
+
+        System.out.println("\nUpgrade your Pokemon level ! [YES ?]");
+        String ans = sc.nextLine();
+            if(ans.equalsIgnoreCase("yes")){
+                System.out.println("\n"+a.LevelUp());;
+            }
+    }
+        
+    public static void wait(int ms){
+        try{
+            Thread.sleep(ms);
+        }catch(InterruptedException ex){
+            Thread.currentThread().interrupt();
+        }
+    }
+}
