@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class L2Q1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int fahrenheit ;
+        double celcius ;
+        System.out.println("Input temperature (fahrenheit) : ");
+        fahrenheit = sc.nextInt();
+        celcius = (fahrenheit -32) / 1.8 ;
+        System.out.printf("%.2f",celcius);
+     
+    }
+}
