@@ -1,0 +1,44 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Q;
+//Write a method that accepts two parameters namely N and R. The method should check whether the number R is the summation of N subsequent number (any number). 
+//Write a Java program that accept input N and R from the user and check using the method. 
+//If there is a summation of N subsequent number, print out R = x + (x+1) + (x+2) + … else, print out “No summation of subsequent number”
+import java.util.Scanner;
+public class Q3 {
+    public static void main(String[] args) {
+       int N, R;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter N : ");
+		N = sc.nextInt();
+		System.out.println("Enter R : ");
+		R = sc.nextInt();
+		int sum = Summation(N, R);
+		if (R != sum)
+			System.out.println("No summation of subsequent number");
+
+	}
+	public static int Summation(int n, int r) {
+		int[] array = new int[n];
+		int a = (r / n) - 1; // find the minimal value where start to add subsequent number
+		int sum = 0;
+		for (int i = 0; i < n; i++) {
+			sum = sum + a; // summation of subsequent number
+			array[i] = a; //store the value of subsequent value of a
+			a++; 
+		}
+
+		if (r == sum) {
+			System.out.printf(r + " = ");
+			for (int i = 0; i < n; i++) {
+				System.out.print(array[i]);
+				if (i < n - 1)
+					System.out.printf(" + ");
+			}
+		}
+		return sum; 
+    }
+}
