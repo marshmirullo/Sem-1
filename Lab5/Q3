@@ -1,0 +1,22 @@
+public class L5Q3 {
+    public static void main(String[] args) {
+//        Write a program that randomly generate the seven day work hours (1-8 hours) for N employee. 
+//        Then, display the work hours in seven days and the total hours for each employee
+    Scanner sc = new Scanner (System.in);
+    Random r = new Random ();
+    int num , totalTime = 0 , MAX = 8 , MIN = 1 ;
+    System.out.println("Input numbers of employee : ");
+    num = sc.nextInt();
+    int [][] employee = new int [num][7]; // num utk jjumlah employee , 7 untuk masa bekerja 7 hari
+            for (int i = 0 ; i < employee.length ; i++){
+                System.out.println("\nEmployee :" +(i+1)); 
+                totalTime = 0;
+                for(int j = 0 ; j < 7 ; j++){
+                employee[i][j] = r.nextInt(MAX - MIN)+MIN;
+                System.out.print(employee[i][j]+ ",");
+                totalTime += employee[i][j]; 
+            }
+                System.out.println("\nTotal time = " + totalTime);
+        }
+    }
+}
