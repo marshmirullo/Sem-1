@@ -1,0 +1,294 @@
+public class L4Q1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Enter an integer : ");
+        
+        int integer  = sc.nextInt();
+        
+        System.out.print("Factors of " + integer + " are: ");
+        for (int i = 1; i <= integer ; i++) {
+            if (integer % i == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+
+public class L4Q2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int plus = 0 , total = 0 ,n = 0;
+        System.out.println("Enter an integer : ");
+        int number = sc.nextInt();
+        
+        for(int i = 0 ; i <= number ; i++ ){
+            plus = n + i;
+            n = plus ;
+            total += n;
+        
+        }
+        System.out.println("Sum of series : " + total);
+    }
+}
+
+public class L4Q3 {
+    public static void main(String[] args) {
+          Scanner sc =new Scanner (System.in);
+//        int score, count = 0, min = 100, max = 0, total = 0;
+//        double average = 0, s = 0;
+//        
+//        boolean status = true;
+//        do {
+//            System.out.print("Enter a score [negative score to quit]: ");
+//            score = sc.nextInt();
+//            count++; // to calculate the average (sum of score enter)
+//            if (score < 0) {
+//                status = false;
+//            } 
+//            else {
+//                // Max
+//                if (score > max) {
+//                    max = score;
+//                }
+//                
+//                // Min
+//                if (score < min) {
+//                    min = score;
+//                }
+//                
+//                // Calculation
+//                total += score;
+//                s += Math.pow(score,2);
+//            }
+//            
+//       } while (status);
+//        
+//        // Further Calculation
+//        count = count - 1;
+//        average = total / count;
+//        s = Math.sqrt((s - (Math.pow((total), 2)/count))/(count - 1)); 
+//        // standard deviation formula
+//                
+//        System.out.println("Minimum Score: " + min);
+//        System.out.println("Maximum Score: " + max);
+//        System.out.printf("Average Score: %.2f\n", average);
+//        System.out.printf("Standard Deviation: %.2f", s);
+//        System.out.println();
+     
+        int score , count = 0 , min = 0 , max = 0 ,total =0 ;
+        double average = 0 , s =0 ;
+        boolean status = true ;
+        do {
+            System.out.println("Enter a score : ");
+            score = sc.nextInt();
+            count++; // to record numbers input 
+                if(score < 0){
+                    status = false ;
+                }
+                    else
+                    {
+                    if (score > max){
+                    max = score;
+                        }
+                    if (score < min){
+                    min = score; 
+                    }
+                    total += score ;
+                    s += Math.pow(score,2); // total score power 2
+                    }
+        }   while (status);
+            count -= 1;
+            average = total / count ; 
+            s = Math.sqrt((s - (Math.pow((total),2)/count))/(count-1)); // kene susun betul2
+            
+            System.out.println("Minimum score : " + min);
+            System.out.println("Maximum score : " + max);
+            System.out.println("Average score : " + average);
+            System.out.println("Standard deviation : " + s);
+            System.out.println("");
+    }
+}
+
+public class L4Q4 {
+    public static void main(String[] args) {    
+        /*Scanner sc =new Scanner(System.in);
+        int year,first,may = 0,aug = 0,feb,counter,jump=0;
+        System.out.print("Enter year : ");
+        year = sc.nextInt();
+        System.out.print("First day of the year : ");
+        first = sc.nextInt();
+        if (year %4==0&&year%100!=0||year%400==0){
+            feb=29;
+            }
+        else {
+            feb=28;        
+            may = 92;
+            may = 92+feb;
+            aug = 184+feb;
+        }
+        System.out.println("\t\t\t\t\tMAY");
+        may = (may%7+first)%7;
+        aug = (aug%7+first)%7;
+        System.out.println("Sunday\t\tMonday\t\tTuesday\t\tWednesday\tThurday\t\tFriday\t\tSaturday");
+        for(counter=0;counter<may;counter++){
+            System.out.print("\t\t");
+            jump++;
+            }
+for (int i =1;i<=31;i++){ 
+            System.out.print(i+"\t\t");
+            jump++;
+            if (jump%7==0)
+                System.out.print("\n");
+        }
+        System.out.println("\n\t\t\t\t\tAUGUST");
+        System.out.println("Sunday\t\tMonday\t\tTuesday\t\tWednesday\tThurday\t\tFriday\t\tSaturday");
+        jump=0;
+        
+        for(counter=0;counter<aug;counter++){
+            System.out.print("\t\t");
+            jump++;
+        }
+        for (int i =1;i<=31;i++){ 
+            System.out.print(i+"\t\t");                 
+            jump++;
+            if (jump%7==0)
+                System.out.print("\n");
+        }
+        */
+        Scanner sc = new Scanner (System.in);
+        int day,year;
+        int MIN = 5 , MAX =8 ;
+        System.out.println("Enter a year : ");
+        year = sc.nextInt();
+        System.out.println("Enter day (0 = Sunday, 1 = Monday ,...) : ");
+        day = sc.nextInt();
+            for(int i = 1 ; i <= MAX ; i++){
+                if(i == MIN){
+                    System.out.println("\nMay " + year);
+                    System.out.print("Sun  Mon  Tue  Wed  Thu  Fri  Sat ");
+                    for(int d = 0 ; d < day ; d++)
+                        System.out.println("   ");
+                    for(int j =1 ; j <=31 ; j++ ){
+                        System.out.printf("%-5d",j);
+                        day++;
+                        day%=7;
+                        if(day==0)
+                            System.out.println("");
+                    }
+                }
+                else if(i==MAX){
+                    
+                    System.out.println("\n\nAugust " + year );
+                    System.out.print("Sun  Mon  Tue  Wed  Thu  Fri  Sat ");
+                    for(int d = 0 ; d < day; d++)
+                        System.out.println("   ");
+                    for(int j =1 ; j <= 31 ; j++){
+                        System.out.printf("%-5d",j);
+                        day++;
+                        day%=7;
+                        if (day== 0)
+                            System.out.println("");
+                    }   
+                    System.out.println("");
+                }
+                else if(i==2){
+                    if(isLeap(year))
+                        day = (day+29)%7;
+                    else
+                        day = (day+28)%7;
+                }
+                else if (i ==4 || i == 6){
+                    day = (day+30)%7;
+                }
+                else {
+                    day = (day+31) % 7;
+                }
+            }
+        }       
+    public static boolean isLeap(int y){ // new function 
+        if(y%400==0 || (y%4==0 && y%100 != 0)) // leap year formula 
+            return true;
+        else 
+            return false ;        
+    }
+}
+
+public class L4Q5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int score1, score2, dice;
+        Random rand = new Random();
+        score1 = score2 = 0;
+        boolean isPlayer1Turn = true;
+        while(score1<=100 && score2<=100){
+            
+            if(isPlayer1Turn){
+                System.out.println("Player 1's turn, press Enter to roll dice");
+                sc.nextLine();
+                dice = rand.nextInt(6)+1;
+                score1 += dice;
+                if(dice != 6){
+                isPlayer1Turn = !isPlayer1Turn;
+                }
+                System.out.println("Player 1 gets " + dice + " points, total point is " + score1);
+            } else {
+                System.out.println("Player 2's turn, press Enter to roll dice");
+                sc.nextLine();
+                dice = rand.nextInt(6)+1;
+                score2 += dice;
+                if(dice != 6){
+                isPlayer1Turn = !isPlayer1Turn;
+                }
+                System.out.println("Player 2 gets " + dice + " points, total point is " + score2);
+            }
+        }
+        if(score1 > score2){
+            System.out.println("Player1 win");
+        } else {
+            System.out.println("Player2 win");
+        }
+    }
+}
+
+public class L4Q6 {
+     public static void main(String[] args) {
+        Random r = new Random ();
+        String str ;
+        int num , i;
+        num = r.nextInt();
+        while (num<0){
+            num = r.nextInt();
+            str = Integer.toString(num) + " " ; // convert integer to string
+            for ( i = 0; str.charAt(i)!= ' ' ; i++){ // return string as a character and algorithm to increase the count digit if there is no space
+            }
+            System.out.println("The number of digit for the negative numbers " + num + " is " + i);
+        }
+        
+    }
+}
+
+public class L4Q7 {
+    public static void main(String[] args) {
+      first:
+         for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++){
+               if(i == 1){
+                  continue first;
+               }
+               System.out.print(" [i = " + i + ", j = " + j + "] ");
+            }
+         }
+         System.out.println();
+     
+      second:
+         for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++){
+               if(i == 1){
+                  break second; // label for specified loop
+               }
+               System.out.print(" [i = " + i + ", j = " + j + "] ");
+            }
+        }
+    }
+}
+
