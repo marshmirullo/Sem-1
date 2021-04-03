@@ -1,0 +1,31 @@
+public class L5Q1 {
+    public static void main(String[] args) {
+// Write a program to randomly generate N student scores (0-100). 
+//The program will prompt the user to enter N students and store the score in an array. 
+//  Then, the program will display a list of score, the highest score, the lowest score and the average score
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Enter number of students : ");
+        int num = sc.nextInt();
+        int max = 0, min = 100, i = 0 , total = 0;
+        double average = 0;
+        Random r = new Random ();
+        int [] scoreofNum = new int [num];
+            for(i = 0 ; i < num ; i++){
+                scoreofNum[i] = r.nextInt(101);
+                System.out.println("Student "+(i+1)+ "Score = " + scoreofNum[i]);
+                total += scoreofNum[i];
+            
+            if(scoreofNum[i] > max ){
+            max = scoreofNum[i];
+            }
+            if(scoreofNum[i] < min) {
+            min = scoreofNum[i];
+                }
+            }
+        average += total/(double)num;        
+        System.out.printf("Average Score of : %.2f " ,average);
+        System.out.println("\nHighest Score of :" + max);
+        System.out.println("Lowest Score of :" + min);
+    }
+    
+}
