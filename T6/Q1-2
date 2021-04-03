@@ -1,0 +1,197 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package W8;
+
+import java.util.Random;
+import java.util.Scanner;
+
+/**
+ *
+ * @author USER
+ */
+public class T6 {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner (System.in);
+    // 1a    
+//      returnMax(3,6,9);
+    // 1b.
+    /*
+        System.out.println("Enter any number : ");
+        double number = sc.nextDouble();
+            if(squareNumber(number)){
+                System.out.println("Yes, a perfect square number !");
+            }
+            else {
+                System.out.println("Not a perfect square number !");
+            }
+            */
+    //  1d.
+    /*
+        System.out.println("Enter a pentagonal number : ");
+        int num = sc.nextInt();
+            if(pentagonalNumber(num)){
+                System.out.println(num + " is a pentagonal number ");
+            }
+            else {
+                System.out.println(num + " is not a pentagonal number ");
+            }
+    */            
+    //1e.
+    /*
+        System.out.println("Enter any sentence : ");
+        String x = sc.nextLine();
+        count(x);
+    */
+    //1f.
+    /*  
+        getrandomNum();
+     */
+    //1g.
+    /*
+        System.out.println("Enter radius : ");
+        double r = sc.nextDouble();
+        circle(r);
+    */    
+    //1h.
+    /*
+        randomNumber();
+    */
+    //2.
+    /*
+        decreasingOrder(10,55,2);
+    */
+        int num [] =
+        permutation(num[0]);
+        
+    }
+        
+    
+//    ______________________________________________________________________________
+    public static void permutation (int [] n){
+        int[] num = new int [3];
+        System.out.println(num[0]);
+        }
+// 1a.
+    /*
+    public static int returnMax(int A , int B , int C){
+        return Math.max(A,Math.max(B,C));
+    */    
+    // 1b.
+    /*
+    public static boolean squareNumber(double number){
+        double sqrt = Math.sqrt(number); 
+    //finds the floor value of the square root and comparing it with zero , if sqrt same with floor value will equal to 0 
+        return ((sqrt - Math.floor(sqrt)) == 0);
+    
+    public static boolean isSquare(int num){
+        if(Math.sqrt(num) == (int)Math.sqrt(num)){
+        return true;
+            }else{
+        return false;
+        }
+            }
+    */
+    //1c?
+        // public static
+    
+    
+    //1d
+    /*
+    public static boolean pentagonalNumber(int N){
+        double pentaNum = 0 , i = 1 ;
+            do{
+                pentaNum= 0.5*(3*i*i-i) ;
+                i++;
+            }
+            while (pentaNum < N) ;
+            return (pentaNum == N );
+    */
+    //1e.
+    /*
+    public static void count(String s){
+        char [] stringnum = s.toCharArray() ;
+        int letter = 0 , digit = 0;
+            for(int i = 0 ; i < s.length() ; i++){
+                if(Character.isLetter(stringnum[i])){
+                    letter++;
+                }
+                else if(Character.isDigit(stringnum[i])){ // syntax to find digit from char array
+                    digit++;
+                }
+            
+            }
+            System.out.println("Letter count = " + letter);
+            System.out.println("Digit count = " + digit);
+        }
+    */
+    //1f.
+    /*
+        public static void getrandomNum(){
+            Random r = new Random();
+            final int MAX = 100;
+            for(int i = 1 ; i<= 10 ; i++){
+                int num = r.nextInt(MAX+1);
+                System.out.print(num + " ");
+            }
+            System.out.println("");
+        }
+    */
+    //1g.
+    /*
+        public static void circle (double r){
+            double area , circum ;
+            double[] value = new double[2];
+            value[0] = Math.PI*r*r;
+            value[1] = 2*Math.PI*r; 
+            System.out.println("Area of circle = " + value[0]);
+            System.out.println("Circumference of circle = " + value[1]);
+    */
+    //1h.
+   /* 
+        public static int randomNumber(){
+        boolean[]arrDuplicated = new boolean[11];
+            Random r = new Random();
+            boolean duplicate = false ;
+            int num = 0;
+            while (!duplicate){
+                num = r.nextInt(11);
+                if(arrDuplicated[num]==false){
+                    arrDuplicated[num]=true;
+                }   
+                else {
+                    duplicate=true;
+                }
+            }
+            return num;
+    }
+    */
+    //2.
+    /*
+        public static void decreasingOrder(int num1 , int num2 ,int num3){
+		int temp; // Hold number to swap
+		//descending order algorithm
+		if (num2 > num3 && num2 > num1){
+			temp = num2;
+                        num2 = num1;
+			num1= temp;
+                    }
+		else if (num3 > num1 && num3 > num2) {
+			temp = num3; 
+			num3 = num1;
+			num1 = temp;
+                    }
+                if (num3 > num2) {
+			temp = num3;
+			num3 = num2;
+			num2 = temp;
+                    }
+		
+		// Display result
+		System.out.println(num1 + " " + num2 + " " + num3);
+                }
+    */
+            }
+
