@@ -1,0 +1,13 @@
+public class L6Q1 {
+    public static void main(String[] args) {
+        TriangularNum(20); // 20 is the parameter
+    }
+    public static int TriangularNum(int N){
+        int sum = 0;
+        for(int i = 1 ; i <= 20 ; i++ ){
+        sum = (i*(i+1))/2;
+        System.out.print(sum + " ");   
+        }
+        return sum;
+    }
+}
