@@ -22,5 +22,4 @@ public class L6Q4
             return b; 
         return gcd(b%a, a); 
 */
-  
 
