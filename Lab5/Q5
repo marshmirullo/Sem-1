@@ -1,0 +1,70 @@
+public class L5Q5 {
+//Write a program that generates 20 random integers within the range from 0 to 100.
+//Sort the array in descending order. Then, accepts an integer input from the user. Then,
+//search the array using this number. Compare the performance of linear search and
+//binary search. 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        Random r = new Random();
+        final int MAX = 100 , MIN = 0;
+        boolean got = false ;
+        int number[] = new int [20];
+        int sreach , low =0 , high = number.length -1 , middle = 0 , temp = 0 , linear = 0, binary =0; 
+        for (int i =0 ; i < number.length; i++){
+            number[i] = r.nextInt(MAX - MIN + 1); // operation for random numbers operated
+        }
+        System.out.println("List of 20 random integers within 0 to 100 : "); 
+        for(int i = 0 ; i < number.length ; i++){
+            System.out.print(number[i] + " ");
+        }
+        
+        for (int i =0 ; i <number.length ; i++){
+            for(int j = i+1; j<number.length ; j++){
+                if (number[i]<number[j]){
+                    temp = number [j];
+                    number[j]= number[i];
+                    number[i] = temp ; // algorithm for descending manner
+                }
+            }
+        }
+      System.out.println("\nArray in descending order :"); 
+        for(int i=0;i<number.length;i++){
+            System.out.print(number[i]+ " ");
+        }
+        System.out.println("\nEnter an integer : ");
+        sreach = sc.nextInt();
+        
+        for(int i =0 ; i < number.length ; i++){
+            if(number[i] == sreach){
+               got = true ;
+               break;
+            }
+            linear++;
+        }
+        if(got==true)
+            System.out.println(sreach + " found ");
+        else 
+            System.out.println(sreach + " not found");
+            System.out.printf("Linear Search -- %d loop(s)",linear);
+        
+        got = false ;
+        while(low<= high){
+            binary++;
+            middle = (low+high)/2;
+            if(sreach == number[middle]){
+            got = true ;
+            break;
+            }
+            else if (sreach<number[middle])
+                high = middle - 1;
+                else 
+                low = middle + 1;
+            }
+            if(got == true){
+                System.out.printf("\n%d found " , sreach);
+            }
+            else
+                System.out.printf("\n%d not found ", sreach);
+                System.out.printf("\nBinarySearch -- %d loop(s)" , binary);
+        }
+    }
