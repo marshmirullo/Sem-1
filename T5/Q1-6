@@ -1,0 +1,84 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Lab5;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author USER
+ */
+public class T5 {
+    public static void main(String[] args) {
+        
+//        int[][] matrix = { { 6 , 9 },{ 2 , 5 },{ 4 , 6 }};
+//            System.out.println(matrix);
+    //2a.
+//        String[] code = {"AAA", "AAB", "AAC", "AAD"};
+    //2b.
+//        int sum = 0;
+//        int[] num = new int [10];
+//        for(int k=0; k<=num.length; k++)
+//        sum += num[k];
+
+//        int[][]t = new int[3][]; 
+//        t[1][2] = 5;
+
+//            int i=3; 
+//		 int [] score = new int[5]; 
+//		 score [1] = 78; 
+//		 score[++i] = 100;
+//                 
+//                 System.out.println(score[++i]);
+
+//        int[] marks = new int[5]; 
+//		int i = 0, j = 1; 
+//		marks[i] = 12; 
+//		marks[j] = marks[i] + 19; 
+//		marks[j-1] = marks[j] * marks [j]; 
+//		marks[j*3] = marks[i+1]; 
+//		marks[++j] = marks[i]%5; 
+//                marks[2*j] = marks[j-1];
+//
+//                System.out.println(marks[i]);
+
+     //Question 4       
+//        int count = 0;
+//        String sentence = "The the The THE tHE THe The the the";
+//        String [] arr_sentence = sentence.split(" "); // regex = we split the space to find other string that matches the word 
+//        for(int i=0; i<arr_sentence.length; i++){
+//            if (arr_sentence[i].equals("the"))
+//                count++;
+//        }
+//        System.out.println("The number of occurrence of the word \"the\" is " + count);
+
+      //Question 5
+//        Scanner sc = new Scanner (System.in);
+//        System.out.println("Type any sentence : ");
+//        String sentence = sc.nextLine();
+//        String [] words = sentence.split(" ") ; // (" ") = regex = sequence of characters that forms a search pattern
+//                                                // we split the variable sentence for " " (space)
+//        for(int i=words.length - 1;i>=0;i--){ // algorith dah paham kenapa kene tolak 1
+//        System.out.print(words[i] + " ");
+//        }
+
+       //Question 6
+//        Scanner sc = new Scanner (System.in);
+//        System.out.println("Input any number : ");
+//        int input = sc.nextInt();
+//        int [] BinaryNum = new int[32];
+//        int i = 0; 
+//            while (input > 0){ // loop to divide the input until 0
+//            BinaryNum[i] = input % 2; // take remainder
+//            input /= 2;
+//            i++; // to increment the array index          
+//            }
+//            for (int j = i - 1 ; j>=0 ; j-- ){ // loop to reverse the number
+//                System.out.print(BinaryNum[j]);
+//            }
+    }
+}
+     
