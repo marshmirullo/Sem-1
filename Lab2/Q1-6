@@ -68,7 +68,7 @@ public class L2Q3 {
         System.out.println("\n"+ sum);
         System.out.printf("%.2f",average);
     }
-}
+} 
 
 public class L2Q4 {
     public static void main(String[] args) {
